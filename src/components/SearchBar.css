@@ -1,0 +1,279 @@
+.search-container {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+    border-radius: 50px 50px 0 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #c5a059;
+  box-shadow: 0 0 15px rgba(197, 160, 89, 0.1);
+}
+
+.search-suggestions {
+    /* top-left | top-right | bottom-right | bottom-left */
+
+    border-radius: 0 0 20px 20px;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: none;
+  z-index: 1001;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.suggestion-item {
+    text-decoration: none;
+    
+  padding: 12px 20px;
+  margin: 0;
+  color: #ccc;
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  transition: all 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background: #c5a059;
+  color: #000;
+}
+
+/* Remove all default link styles from the suggestion wrapper */
+.suggestion-link {
+  text-decoration: none !important;
+  color: inherit;
+  display: block; /* Makes the entire row clickable */
+}
+
+.search-suggestions {
+  position: absolute;
+  top: calc(100% + 10px); /* Small gap from input */
+  left: 0;
+  width: 100%;
+  background: #111111; /* Deep obsidian */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  z-index: 2000;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.suggestion-item {
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #efefef;
+  letter-spacing: 0.5px;
+}
+
+.suggestion-view {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #c5a059; /* Gold */
+  opacity: 0; /* Hidden by default */
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+/* Luxury Hover State */
+.suggestion-link:hover .suggestion-item {
+  background: rgba(197, 160, 89, 0.05); /* Very faint gold glow */
+}
+
+.suggestion-link:hover .suggestion-title {
+  color: #fff;
+}
+
+.suggestion-link:hover .suggestion-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.search-container {
+  position: relative;
+  width: 100%; /* Ensures the container defines the width */
+}
+
+.search-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 14px 24px;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  
+  /* SOFT TOUCH: Only round the top corners */
+  border-radius: 12px 12px 0 0; 
+  
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Crucial for matching width */
+}
+
+/* If there is NO search query, we round all corners for a clean look */
+.search-input:placeholder-shown {
+    border-radius: 12px;
+}
+
+.search-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(197, 160, 89, 0.5); /* Soft gold border */
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%; /* Sits exactly at the bottom of the input */
+  left: 0;
+  width: 100%; /* Matches input width exactly */
+  background: #141414;
+  border: 1px solid rgba(197, 160, 89, 0.5);
+  border-top: none; /* Merges the two boxes */
+  
+  /* SOFT TOUCH: Only round the bottom corners */
+  border-radius: 0 0 12px 12px;
+  
+  z-index: 2000;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box; /* Ensures border doesn't make it wider */
+}
+
+.suggestion-link {
+  text-decoration: none;
+  display: block;
+}
+
+.suggestion-item {
+  padding: 15px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.3s ease;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none; /* Clean finish at the bottom curve */
+}
+
+.suggestion-item:hover {
+  background: rgba(197, 160, 89, 0.1);
+}
+
+.suggestion-title {
+  color: #ccc;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+/* Container transition */
+.search-container {
+  position: relative;
+  width: 100%;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Suggestions container with a smooth scale-down effect */
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #141414;
+  border: 1px solid rgba(197, 160, 89, 0.5);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  z-index: 2000;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  
+  /* Luxury entry animation */
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Optional: Hide entire bar if needed elsewhere */
+.search-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #141414;
+  border: 1px solid rgba(197, 160, 89, 0.5);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  z-index: 2000;
+  
+  /* FIXED SCROLLING LOGIC */
+  max-height: 350px;       /* Set a limit so it doesn't hit the bottom of screen */
+  overflow-y: auto;        /* Enable vertical scrolling */
+  overflow-x: hidden;      /* Prevent horizontal shifting */
+  overscroll-behavior: contain; /* Prevents the main page from scrolling when you reach the end of the list */
+  
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+}
+
+/* Width of the scrollbar */
+.search-suggestions::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* The track (background) */
+.search-suggestions::-webkit-scrollbar-track {
+  background: #0a0a0a;
+  border-radius: 0 0 12px 0;
+}
+
+/* The handle (the part you move) */
+.search-suggestions::-webkit-scrollbar-thumb {
+  background: #c5a059; /* Champagne Gold */
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.search-suggestions::-webkit-scrollbar-thumb:hover {
+  background: #d4af37; /* Brighter gold on interaction */
+}

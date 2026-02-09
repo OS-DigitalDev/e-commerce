@@ -1,0 +1,330 @@
+
+/* GLOBAL FIX: Add to the top of your CSS file */
+* {
+  box-sizing: border-box; /* Ensures width calculations are predictable */
+}
+
+.auth-page {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #080808;
+  /* FIX: Pushes the form down so it doesn't overlap the fixed navbar */
+  padding-top: 10px; 
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Container for the form and animated border */
+.auth-card-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  /* Use flex-shrink to prevent overflow on very small screens */
+  flex-shrink: 1; 
+  padding: 2px;
+  border-radius: 24px;
+  overflow: hidden; /* Clips the rotating glow to the corners */
+  display: flex;
+}
+
+/* ROTATING GLOW LINE */
+.glow-border {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 40%,
+    #c5a059 50%, 
+    transparent 60%
+  );
+  animation: rotateGlow 4s linear infinite;
+  z-index: 1;
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.auth-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: #121212;
+  padding: 10px;
+  border-radius: 22px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* FIX: Input area overflowing to the right side */
+.input-group input {
+  width: 100%; /* Now stays inside because of border-box */
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #c5a059;
+  box-shadow: 0 0 10px rgba(197, 160, 89, 0.2);
+}
+
+
+
+/* Auth Container */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top right, #1a1a1a, #080808);
+  padding: 10px;
+}
+
+/* Frosted Glass Card */
+.auth-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px 20px;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 4px; /* Luxury sharp edges */
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  margin: 0px;
+}
+
+.auth-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.auth-subtitle {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* Form Styling */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-group {
+  position: relative;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #c5a059; /* Champagne Gold */
+  margin-bottom: 8px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 0;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.4s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-bottom-color: #c5a059;
+}
+
+/* Buttons */
+.auth-btn {
+  background: #c5a059;
+  color: #000;
+  border: none;
+  padding: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.4s ease;
+}
+
+.auth-btn:hover {
+  background: #fff;
+  box-shadow: 0 0 30px rgba(197, 160, 89, 0.3);
+}
+
+.auth-footer {
+  margin-top: 30px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.auth-link {
+  color: #c5a059;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #080808;
+  padding: 20px;
+}
+
+/* Container for the form and the animated border */
+.auth-card-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  padding: 2px; /* This defines the thickness of the glowing border */
+  border-radius: 24px; /* Soft Touch Corners */
+  overflow: hidden; /* Clips the rotating gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* THE ROTATING GLOW LINE */
+.glow-border {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    transparent 40%,
+    #c5a059 50%, /* Champagne Gold */
+    transparent 60%,
+    transparent 100%
+  );
+  animation: rotateGlow 4s linear infinite;
+  z-index: 1;
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* THE FORM CONTAINER */
+.auth-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: #121212; /* Solid dark background to cover the center glow */
+  padding: 10px 40px;
+  border-radius: 22px; /* Slightly smaller than wrapper to fit inside */
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.auth-header p {
+  color: #777;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+/* INPUT STYLING */
+.input-group {
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px; /* Soft corners for inputs */
+  color: #fff;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #c5a059;
+  background: rgba(197, 160, 89, 0.05);
+}
+
+/* AUTH BUTTON */
+.auth-btn {
+  width: 100%;
+  padding: 16px;
+  margin-top: 20px;
+  background: #c5a059;
+  border: none;
+  border-radius: 12px;
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
+}
+
+/* FOOTER */
+.auth-footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.auth-footer span {
+  color: #c5a059;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.auth-footer span:hover {
+  color: #fff;
+  text-decoration: underline;
+}
