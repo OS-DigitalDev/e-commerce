@@ -4,13 +4,13 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Product from "../pages/Product";
 import ProjectDetails from "../pages/ProjectDetails";
-import Navbar from "../components/NavBar";
+import Navbar from "../components/Navbar";
 import Login from "../Auth/Login";
 import Signup from "../Auth/Signup";
 
 function AppRoutes(){
     return (
-        /* Use a Fragment <> or a div to wrap everything */
+        
         <>
             {/* Navbar stays here so it shows on every page */}
             <Navbar /> 
