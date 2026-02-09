@@ -3,6 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "homepage": "https://github.com/OS-DigitalDev/e-commerce#readme",
+  "bugs": {
+    "url": "https://github.com/OS-DigitalDev/e-commerce/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OS-DigitalDev/e-commerce.git"
+  },
   "license": "ISC",
   "author": "",
   "type": "module",

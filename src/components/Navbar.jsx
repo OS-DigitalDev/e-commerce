@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import "./Navbar.css";
-import Product from "../pages/Product";
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
